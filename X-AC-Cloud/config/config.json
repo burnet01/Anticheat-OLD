@@ -1,0 +1,16 @@
+{
+  "port": 50051,
+  "maxPlayersPerServer": 2000,
+  "aimRotationBuffer": 600,
+  "rnnRotationBuffer": 150,
+  "onnxBaselineBuffer": 40,
+  "onnxPhysicsBuffer": 20,
+  "maxConcurrentStreams": 10000,
+  "aimUnusualThreshold": 0.3,
+  "aimStrangeThreshold": 0.5,
+  "aimSuspectedThreshold": 0.7,
+  "onnxThreshold": 0.85,
+  "inferenceThreads": 4,
+  "modelsDirectory": "models",
+  "loadModelsFromResources": false
+}

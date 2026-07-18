@@ -1,0 +1,13 @@
+name: X-AC
+version: '5.4 (Requin)'
+api-version: '1.21'
+author: Burnet01
+description: "Complex combat/automation ML analysis anti-cheat (ML: quark-e-4.0-100k-mini)"
+main: win.ac.x.X
+depend: [ packetevents ]
+commands:
+  mx:
+    description: "Main command"
+    usage: "/mx"
+    permission: "mx.admin"
+    aliases: [ mx ]

@@ -1,0 +1,26 @@
+package win.ac.x.listeners;
+
+import com.github.retrooper.packetevents.event.PacketListener;
+import com.github.retrooper.packetevents.event.PacketReceiveEvent;
+import com.github.retrooper.packetevents.protocol.packettype.PacketType;
+import win.ac.x.api.data.PlayerContainer;
+import win.ac.x.api.events.WindowClickEvent;
+import win.ac.x.api.player.PlayerProfile;
+import org.bukkit.Bukkit;
+import org.bukkit.entity.Player;
+
+public final class InventoryListener implements PacketListener {
+
+    @Override
+    public void onPacketReceive(PacketReceiveEvent event) {
+        if (event.getPacketType() == PacketType.Play.Client.CLICK_WINDOW) {
+            java.util.UUID uuid = event.getUser().getUUID();
+            if (uuid == null) return;
+            Player player = Bukkit.getPlayer(uuid);
+            if (player == null) return;
+            PlayerProfile protocol = PlayerContainer.getProfile(player);
+            if (protocol == null) return;
+            protocol.run(new WindowClickEvent(event));
+        }
+    }
+}

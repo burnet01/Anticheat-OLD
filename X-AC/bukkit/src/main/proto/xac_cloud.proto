@@ -1,0 +1,62 @@
+syntax = "proto3";
+
+package xac.cloud;
+
+option java_package = "xac.cloud.proto";
+option java_multiple_files = true;
+
+service MLInference {
+  // Bidirectional stream: client sends player events, server returns ML verdicts
+  rpc ProcessPlayerStream(stream ClientMessage) returns (stream ServerMessage);
+}
+
+message ClientMessage {
+  string server_id = 1;
+  string player_id = 2;
+  oneof payload {
+    RotationData rotation = 3;
+    AttackEvent attack = 4;
+    MoveData movement = 5;
+    PlayerDisconnect disconnect = 6;
+  }
+}
+
+message ServerMessage {
+  string player_id = 1;
+  repeated CheckVerdict verdicts = 2;
+}
+
+message CheckVerdict {
+  string check_type = 1;
+  string verdict = 2;
+  float score = 3;
+  string details = 4;
+}
+
+message RotationData {
+  float yaw_delta = 1;
+  float pitch_delta = 2;
+  int64 timestamp = 3;
+}
+
+message AttackEvent {
+  int64 timestamp = 1;
+}
+
+message MoveData {
+  float tick_drift = 1;
+  float horizontal_speed = 2;
+  float vertical_speed = 3;
+  float expected_max_horizontal = 4;
+  float air_ticks = 5;
+  float acceleration = 6;
+  float speed_ratio = 7;
+  float ground_state = 8;
+  float sprint_state = 9;
+  float speed_variance = 10;
+  int64 timestamp = 11;
+}
+
+message PlayerDisconnect {
+  int64 timestamp = 1;
+}
