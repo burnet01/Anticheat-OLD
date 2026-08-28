@@ -1,0 +1,38 @@
+MX Legacy Fork License
+
+Copyright (c) 2026 burnet01
+
+This project is based on and includes substantial code derived from the MX project
+originally developed by kireikosasha and publicly available at:
+https://github.com/kireikosasha/MX-Project/
+
+This project is provided as-is, for educational, research, learning, and codebase
+reference purposes. The project may be copied, modified, distributed, and used in
+whole or in part without requiring attribution or credit to the author(s) of this
+repository or to the original fork source.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in the
+Software without restriction, including without limitation the rights to use,
+copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the
+Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+1. The above copyright notice and this permission notice shall be included in all
+   copies or substantial portions of the Software.
+2. No attribution, credit, or acknowledgement is required for use of the Software,
+   whether commercial or non-commercial.
+3. This project includes code originating from the MX-Project fork lineage, and that
+   origin is acknowledged here for transparency, but it does not impose any credit
+   requirement on users of this project.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+This license is intentionally permissive and does not require attribution for use.
+It is designed to allow broad reuse while clearly documenting the origin of the
+project and the lack of warranty.
